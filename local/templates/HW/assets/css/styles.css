@@ -1,0 +1,71 @@
+header {
+    background-color: blue;
+    height: 50px; / Высота шапки /
+}
+
+footer {
+    background-color: blue;
+    height: 50px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+}
+
+.button-column {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button-column button {
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.fixed_button {
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.header__button {
+    margin-top: 10px;
+    background-color: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+
+.footer {
+    text-align: center;
+    color: green;
+   padding-top: 10px;
+}
