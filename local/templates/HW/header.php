@@ -18,10 +18,17 @@ Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/css/styles.css');
 </head>
 <body <?php $APPLICATION->ShowProperty('BODY_CLASS') ?>>
 <div id="panel"><?php $APPLICATION->ShowPanel(); ?></div>
-<header><button class="header__button" onclick="window.location.href='/'">Вернуться на главную</button></header>
+<header>
+<? if ($APPLICATION->GetCurPage() != '/') { ?>
+    <button class="header__button" onclick="window.location.href='/'">Вернуться на главную</button>
+<? }
+if ($APPLICATION->GetCurPage() != '/') { ?>
+    <button class="header__button__change" onclick="window.location.href='/'">Создать запись</button>
+<? } ?>
+</header>
 <?php
-//if (!$USER->IsAuthorized() && ($_SERVER['REQUEST_URI'] != '/login/index.php')) {
-//    LocalRedirect('/login/index.php');
-//}
+if (!$USER->IsAuthorized() && ($_SERVER['REQUEST_URI'] != '/login/index.php')) {
+    LocalRedirect('/login/index.php');
+}
 ?>
 <h1><?$APPLICATION->ShowTitle('h1');?></h1>
