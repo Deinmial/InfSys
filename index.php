@@ -13,6 +13,5 @@ $results = $DB->Query("SHOW TABLES");
         <?}
         }?>
     </div>
-    <button class="fixed_button" onclick="window.location.href='/create/'">Создать новую таблицу БД</button>
 
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
