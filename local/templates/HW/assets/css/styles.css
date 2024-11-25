@@ -79,3 +79,16 @@ th, td {
     color: green;
    padding-top: 10px;
 }
+
+#sticky-button-container {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 10px;
+    background-color: blue;
+}
+#sticky-button {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+}
