@@ -21,9 +21,6 @@ Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/css/styles.css');
 <header>
 <? if ($APPLICATION->GetCurPage() != '/' && $APPLICATION->GetCurPage() != '/login/') { ?>
     <button class="header__button" onclick="window.location.href='/'">Вернуться на главную</button>
-<? }
-if ($APPLICATION->GetCurPage() == '/table/') { ?>
-    <button class="header__button__change" onclick="window.location.href='/'">Создать запись</button>
 <? } ?>
 </header>
 <?php
