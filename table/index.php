@@ -32,14 +32,16 @@ if (isset($_GET['action']) && $_GET['action'] == 'delete' && isset($_GET['id']))
                 <td><?=$value?></td>
             <?  }?>
             <td>
-                <a href="#">Изменить</a> | <a href="#" onclick="confirmDelete(<?=$row['ID']?>)">Удалить</a>
+                <a href="/change/?row=<?=$selected_value?>">Изменить</a> | <a href="#" onclick="confirmDelete(<?=$row['ID']?>)">Удалить</a>
             </td>
              </tr>
             </tbody>
        <? }
     }?>
     </table>
-
+    <div id="sticky-button-container">
+        <button id="sticky-button" onclick="window.location.href='/create/?table=<?=$selected_value?>'">Создать запись</button>
+    </div>
     <script>
         function confirmDelete(id) {
             if (confirm('Вы уверены, что хотите удалить эту запись?')) {
