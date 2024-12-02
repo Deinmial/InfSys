@@ -61,7 +61,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <input type="text" name="<?=$value?>" id="<?=$value?>" <?// echo $req == 'YES' ? 'REQUIRED':''?>>
                         <?// echo $span?>
                         <br><br>
-                <?}}
+                <?
+                    }
+                }
             }
         }
 
