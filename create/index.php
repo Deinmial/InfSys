@@ -36,16 +36,32 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <form method="POST" onsubmit="return confirm('Вы уверены, что хотите добавить данные?');">
         <?
         // Вывод данных из таблицы
-        $results = $connection->query("SELECT * FROM $selected_table LIMIT 1");
+        $results = $connection->query("SHOW COLUMNS FROM $selected_table");
         if ($results) {
             while ($row = $results->Fetch()) {
                 foreach ($row as $key => $value) {
-                    if($key == 'ID') {
-                        continue;
-                    }?>
-                    <label for="<?=$key?>"><?=$key?>:</label>
-                    <input type="text" name="<?=$key?>" id="<?=$key?>"><br><br>
-                <?}
+
+                    /**
+                     * Реализация проверки на пустоту полей
+                     */
+//                    if ($key == 'Null'){
+//                        $req = $value;
+//                        if ($req == 'YES'){
+//                            $span = '<span style="color: red">*</span>';
+//                        } else {
+//                            $span = '';
+//                        }
+//                    }
+
+                    if($key == 'Field'){
+                        if($value == 'ID') {
+                            continue;
+                        }?>
+                    <label for="<?=$value?>"><?=$value?>:</label>
+                    <input type="text" name="<?=$value?>" id="<?=$value?>" <?// echo $req == 'YES' ? 'REQUIRED':''?>>
+                        <?// echo $span?>
+                        <br><br>
+                <?}}
             }
         }
 
