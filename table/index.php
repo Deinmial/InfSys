@@ -32,7 +32,7 @@ if (isset($_GET['action']) && $_GET['action'] == 'delete' && isset($_GET['id']))
                 <td><?=$value?></td>
             <?  }?>
             <td>
-                <a href="/change/?row=<?=$selected_value?>">Изменить</a> | <a href="#" onclick="confirmDelete(<?=$row['ID']?>)">Удалить</a>
+                <a href="/change/?table=<?=$selected_value?>&row=<?=$row['ID']?>">Изменить</a> | <a href="#" onclick="confirmDelete(<?=$row['ID']?>)">Удалить</a>
             </td>
              </tr>
             </tbody>
